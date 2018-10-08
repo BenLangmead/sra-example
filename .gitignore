@@ -1,2 +1,6 @@
 ngs-*
 cmake-build-debug
+dump
+dump.dSYM
+ncbi-vdb-*
+.idea
