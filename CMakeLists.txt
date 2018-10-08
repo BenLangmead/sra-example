@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.12)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.6")
+set(SOURCE_FILES dump.cpp)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+include_directories(${CMAKE_SOURCE_DIR}/ngs-2.9.2/install/include ${CMAKE_SOURCE_DIR}/ncbi-vdb-2.9.2-1/install/include)
+link_directories(${CMAKE_SOURCE_DIR}/ngs-2.9.2/install/lib64 ${CMAKE_SOURCE_DIR}/ncbi-vdb-2.9.2-1/install/lib64)
+add_executable(dump ${SOURCE_FILES})
+target_link_libraries(dump ncbi-ngs-c++-static ngs-c++-static ncbi-vdb-static dl)
